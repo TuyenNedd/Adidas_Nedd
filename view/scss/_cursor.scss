@@ -1,0 +1,18 @@
+.g-cursor {
+  &__circle {
+    position: fixed;
+    top: 5px;
+    left: 6px;
+    width: 17px;
+    height: 17px;
+    pointer-events: none;
+    user-select: none;
+    border-radius: 100%;
+    // background: #a1facb;
+    background: #000000;
+    background-size: cover;
+    z-index: 999999999;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+}

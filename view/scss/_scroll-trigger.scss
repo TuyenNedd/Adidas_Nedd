@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gsap_scroll-wh {
+  overflow: hidden;
+  width: max-content;
+  margin-top: calc(var(--spacing-80) + 20px);
+  .trigtext {
+    font-size: clamp(8rem, 15vw, 16rem);
+    font-size: 200px;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "AdihausDIN-CnBoldItalic";
+    // letter-spacing: -1px;
+    // word-spacing: -20px;
+
+    .illo {
+      // margin: 0 25px;
+      display: inline-flex;
+    }
+  }
+
+  .trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.gsap_scroll-td {
+  overflow: hidden;
+  width: max-content;
+  margin-top: calc(var(--spacing-80) + 20px);
+  .trigtext {
+    font-size: clamp(8rem, 15vw, 16rem);
+    font-size: 200px;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "AdihausDIN-CnBoldItalic";
+    // letter-spacing: -1px;
+    // word-spacing: -20px;
+
+    .illo {
+      // margin: 0 25px;
+      display: inline-flex;
+    }
+  }
+
+  .trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

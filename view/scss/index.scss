@@ -1,0 +1,1016 @@
+/* -----------------Setup fonts------------------ */
+@import url(//db.onlinewebfonts.com/c/c0cd6ec8ce6d2bbd315a13b62ed13550?family=AdihausDIN);
+@import url(//db.onlinewebfonts.com/c/f9fbc5a4ff13d5639079818db7ffea2a?family=adineue+PRO+Bold+Web);
+
+/* ----------------\/\/\/\/\/\/------------------ */
+
+/* -----------------Setup FontFace------------------ */
+@font-face {
+  font-family: "AdihausDIN-Regular";
+  src: url("../font/AdihausDIN-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "AdihausDIN-Bold";
+  src: url("../font/AdihausDIN-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "AdihausDIN-CnBoldItalic";
+  src: url("../font/AdihausDIN-CnBoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AdihausDIN-CnMediumItalic";
+  src: url("../font/AdihausDIN-CnMediumItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "adineuePRO-Regular";
+  src: url("../font/adineuePRO-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "adineuePRO-Bold";
+  src: url("../font/adineuePRO-Bold.woff2") format("woff2");
+}
+
+/* -----------------End Setup FontFace--------------- */
+
+/* -----------------Import SCSS--------------- */
+@import "variables";
+@import "css-reset";
+@import "cursor";
+@import "scrollbar";
+/* -----------------End Import SCSS----------- */
+:root {
+  --headerHeight: 8vh;
+  --spacing-5: 5px;
+  --spacing-40: 40px;
+  --spacing-60: 60px;
+  --spacing-15: 15px;
+  --spacing-80: 80px;
+  --spacing-60: 60px;
+  --spacing-10: 10px;
+  --spacing-18: 18px;
+  --spacing-24: 24px;
+  --spacing-20: 20px;
+}
+// body {
+//   overflow-x: hidden;
+// }
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --------------Header--------------- */
+@import "header";
+/* --------------End Header----------- */
+
+/* -----------Content Page 1------------------ */
+#page_1 {
+  width: 100%;
+  min-height: 30vh;
+  margin-top: var(--headerHeight);
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  .content_page-1 {
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: 1280px;
+    padding: var(--spacing-40) var(--spacing-15) var(--spacing-60)
+      var(--spacing-15);
+    position: absolute;
+    inset: 0px 0px 0px 0px;
+    margin: 0 auto;
+    max-width: 100%;
+
+    .poster_content-1 {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: auto;
+      position: relative;
+      bottom: 0;
+      padding: 0px;
+      text-align: left;
+      // float: left;
+      width: 33.3333333333%;
+
+      .logo {
+        margin: var(--spacing-15) 0px;
+        display: inline-block;
+        position: relative;
+        // float: left;
+        // clear: both;
+
+        .high-res-picture {
+          filter: initial;
+          opacity: 1;
+          visibility: visible;
+          transition: ease-in-out filter 0.5s;
+          max-width: 60%;
+          max-height: 130px;
+          display: block;
+          text-align: left;
+        }
+      }
+
+      .title-summary-container {
+        .summary {
+          text-shadow: none;
+          color: #fff;
+          margin-bottom: 0px;
+          font-family: "AdihausDIN-Regular";
+          font-size: 18px;
+          letter-spacing: 0px;
+          line-height: 24px;
+        }
+      }
+
+      .explore_but {
+        // width: 50%;
+        margin: var(--spacing-15) 0px;
+
+        .xn_but {
+          border: none;
+          width: auto;
+          height: 50px;
+          padding: 0 15px;
+          background-color: #fff;
+          position: relative;
+          font-family: "AdihausDIN-bold";
+          font-weight: 700;
+          letter-spacing: 2px;
+          line-height: 20px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #fff;
+            border-left: 1px solid #fff;
+            bottom: -3px;
+            height: 3px;
+            left: 3px;
+            width: 100%;
+            display: block;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            border-right: 1px solid #fff;
+            border-top: 1px solid #fff;
+            height: 100%;
+            right: -3px;
+            top: 3px;
+            width: 3px;
+            display: block;
+          }
+
+          a {
+            color: #000;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+/* ----------- End Content Page 1------------------ */
+
+/* -----------Content Page 2------------------ */
+#page_2 {
+  min-height: 30vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-80);
+  .wrapper {
+    position: relative;
+    height: 100%;
+
+    .player {
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      video {
+        object-fit: cover;
+      }
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: var(--spacing-20);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      box-sizing: border-box;
+      gap: var(--spacing-10);
+      z-index: 1;
+
+      .icon-border {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .content_page-2 {
+    display: flex;
+    justify-content: flex-start;
+    padding: var(--spacing-15);
+    padding-bottom: var(--spacing-80);
+    padding-top: var(--spacing-40);
+    height: auto;
+    position: absolute;
+    inset: 0px 0px 0px 0px;
+    width: 1280px;
+    margin: 0 auto;
+    max-width: 100%;
+    .poster_content-2 {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: auto;
+      position: relative;
+      bottom: 0;
+      padding: 0px;
+      text-align: left;
+      // float: left;
+      width: 33.3333333333%;
+
+      .logo {
+        margin: var(--spacing-15) 0px;
+        display: inline-block;
+        position: relative;
+        // float: left;
+        // clear: both;
+        color: #000;
+
+        .high-res-picture {
+          filter: initial;
+          opacity: 1;
+          visibility: visible;
+          transition: ease-in-out filter 0.5s;
+          max-width: 60%;
+          max-height: 130px;
+          display: block;
+          text-align: left;
+        }
+      }
+
+      .title-summary-container-2 {
+        .title_heading {
+          text-shadow: none;
+          margin-bottom: var(--spacing-10);
+          letter-spacing: 0px;
+          color: #fff;
+          font-size: var(--spacing-40);
+          font-family: "adineuePRO-Bold";
+          line-height: var(--spacing-40);
+          text-transform: uppercase;
+        }
+
+        .summary {
+          color: #fff;
+          margin-bottom: 0px;
+          font-family: "AdihausDIN-Regular";
+          font-size: var(--spacing-18);
+          letter-spacing: 0px;
+          line-height: var(--spacing-24);
+
+          .title_heading {
+            margin-bottom: var(--spacing-10);
+            letter-spacing: 0;
+            color: #fff;
+            font-family: "adineuePRO-Bold";
+            font-size: 40px;
+          }
+        }
+      }
+
+      .sinside_but {
+        // width: 50%;
+        margin: var(--spacing-15) 0px;
+
+        .si_but {
+          border: none;
+          width: auto;
+          height: 50px;
+          padding: 0 15px;
+          background-color: #fff;
+          position: relative;
+          font-family: "AdihausDIN-bold";
+          font-weight: 700;
+          letter-spacing: 2px;
+          line-height: 20px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #fff;
+            border-left: 1px solid #fff;
+            bottom: -3px;
+            height: 3px;
+            left: 3px;
+            width: 100%;
+            display: block;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            border-right: 1px solid #fff;
+            border-top: 1px solid #fff;
+            height: 100%;
+            right: -3px;
+            top: 3px;
+            width: 3px;
+            display: block;
+          }
+
+          a {
+            color: #000;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+/* ----------- End Content Page 2------------------ */
+
+/* ----------- Content Page 3------------------ */
+#page_3 {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: var(--spacing-80);
+  padding: 0px;
+  .visual-nav-redesign {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .header_container {
+      position: relative;
+      max-width: 100%;
+      padding: 0 30% 0 15px;
+      width: 1280px;
+      margin: 0 auto;
+      h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-family: "AdihausDIN-CnBoldItalic";
+        letter-spacing: 0.04em;
+        line-height: 1;
+      }
+    }
+
+    .cards-wrapper {
+      // overflow-x: scroll;
+      // overflow-y: hidden;
+      // scroll-behavior: smooth;
+      display: flex;
+      justify-content: space-between;
+      grid-template-columns: unset;
+      gap: 0px 20px;
+      width: 100%;
+      padding: 0px 15px;
+      .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .card-image {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0 min(1.9vw, 28px);
+          position: relative;
+          cursor: pointer;
+
+          &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 112.75%;
+          }
+          .wallpaperWrapper {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            .wall_container {
+              height: 100%;
+              width: 100%;
+
+              picture {
+                width: inherit;
+                height: inherit;
+                cursor: pointer;
+                .high-res-picture {
+                  object-position: top;
+                  filter: initial;
+                  opacity: 1;
+                  visibility: visible;
+                  transition: ease-in-out filter 0.5s;
+                  width: 100%;
+                  object-fit: cover;
+                  height: 100%;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .card-title {
+          margin-top: 15px;
+          font-size: 20px;
+          font-family: "AdihausDIN-Bold";
+          letter-spacing: 0px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
+/* ----------- End Content Page 3------------------ */
+
+/* ----------- Content Page 4------------------ */
+#page_4,
+.carouSwip {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: var(--spacing-20);
+  padding: 0 var(--spacing-5);
+  .carousel {
+    .carousel_content {
+      .swiper {
+        width: 100%;
+        height: 100%;
+        padding: 0 var(--spacing-10);
+
+        .swiper-button-next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 50%;
+          right: 0;
+          color: #000;
+          cursor: pointer;
+          width: 56px;
+          height: 50px;
+          background-color: #fff;
+          border: 1px solid #000;
+          padding: 0 var(--spacing-15);
+          transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+
+          &::after {
+            content: "";
+          }
+
+          .next_icon {
+            svg {
+              display: block;
+              path {
+                fill: #000;
+                transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+              }
+            }
+          }
+
+          &:hover {
+            background-color: #000;
+            border: 1px solid #fff;
+
+            svg {
+              path {
+                fill: #767677;
+              }
+            }
+          }
+        }
+
+        .swiper-button-prev {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 50%;
+          left: 0;
+          color: #000;
+          cursor: pointer;
+          width: 56px;
+          height: 50px;
+          background-color: #fff;
+          border: 1px solid #000;
+          padding: 0 var(--spacing-15);
+          transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+
+          &::after {
+            content: "";
+          }
+
+          .prev_icon {
+            svg {
+              display: block;
+              path {
+                fill: #000;
+                transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+              }
+            }
+          }
+
+          &:hover {
+            background-color: #000;
+            border: 1px solid #fff;
+
+            svg {
+              path {
+                fill: #767677;
+              }
+            }
+          }
+        }
+
+        .swiper-button-disabled {
+          opacity: 0;
+        }
+
+        .swiper-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          display: flex;
+          transition-property: transform;
+          box-sizing: content-box;
+          .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            background: transparent;
+            height: auto;
+            cursor: pointer;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .card-image {
+              position: relative;
+              .wallpaperWrapper {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                .wall_container {
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  flex: 1;
+                }
+              }
+
+              &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                padding-top: 133.3333333333%;
+              }
+            }
+
+            .teaser_content {
+              position: relative;
+              margin-top: var(--spacing-10);
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              .teaser_title {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin-bottom: 0;
+                .str_title {
+                  font-size: 16px;
+                  font-family: "AdihausDIN-Bold";
+                  letter-spacing: 0px;
+                  line-height: 36px;
+                }
+              }
+
+              .summary_teaser {
+                padding-top: 0;
+                font-size: 13px;
+                line-height: 17px;
+                margin: 0;
+                font-family: "AdihausDIN-Regular";
+              }
+
+              .teaser_card {
+                margin-top: 17px;
+                display: flex;
+                align-items: flex-end;
+                flex: 1;
+                .teaser_but {
+                  font-size: 14px;
+                  line-height: 18px;
+                  background-color: transparent;
+                  color: #000;
+                  min-height: 0px;
+                  padding: 0px;
+                  text-align: left;
+                  font-family: "AdihausDIN-Bold";
+                  letter-spacing: 2px;
+                  border: none;
+                  text-decoration: underline;
+                  text-transform: uppercase;
+                  transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+
+                  &:hover {
+                    background-color: #000;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                  }
+                  .card_content {
+                    flex: 1 1 auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ----------- End Content Page 4------------------ */
+
+/* ----------- Content Page 5------------------ */
+#page_5 {
+  position: relative;
+  // display: flex;
+  // justify-content: center;
+  width: 100%;
+  margin-top: var(--spacing-80);
+
+  .content_page-5 {
+    color: #fff;
+    padding-bottom: var(--spacing-40);
+    overflow: hidden;
+    position: relative;
+    .wallpaperWrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      .wall_container {
+        height: 100%;
+        width: 100%;
+        picture {
+          .high-res-picture {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+            display: block;
+          }
+        }
+      }
+    }
+
+    .carousel {
+      .carousel_content {
+        width: 1280px;
+        padding: 0 var(--spacing-15);
+        padding-top: var(--spacing-80);
+        margin: 0 auto;
+        overflow: hidden;
+        max-width: 100%;
+        position: relative;
+        .swiper {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+
+          .swiper-button-disabled {
+            opacity: 0;
+          }
+
+          .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            transition-property: transform;
+            box-sizing: content-box;
+            .swiper-slide {
+              display: flex;
+              flex-direction: column;
+              font-size: 18px;
+              background: transparent;
+              height: auto;
+
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+
+              .card-image {
+                position: relative;
+                .wallpaperWrapper {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  height: 100%;
+                  .wall_container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex: 1;
+                  }
+                }
+
+                &::before {
+                  content: "";
+                  display: block;
+                  width: 100%;
+                  padding-top: 133.3333333333%;
+                }
+              }
+
+              .teaser_content {
+                position: relative;
+                margin-top: var(--spacing-10);
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                .teaser_title {
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  margin-bottom: 0;
+                  .str_title {
+                    font-size: 16px;
+                    font-family: "AdihausDIN-Bold";
+                    letter-spacing: 0px;
+                    line-height: 36px;
+                  }
+                }
+
+                .summary_teaser {
+                  padding-top: var(--spacing-5);
+                  font-size: 16px;
+                  line-height: 22px;
+                  margin: 0;
+                  font-family: "AdihausDIN-Regular";
+                }
+
+                .teaser_card {
+                  margin-top: 17px;
+                  display: flex;
+                  align-items: flex-end;
+                  flex: 1;
+                  .teaser_but {
+                    font-size: 14px;
+                    line-height: 18px;
+                    background-color: transparent;
+                    color: #fff;
+                    min-height: 0px;
+                    padding: 0px;
+                    text-align: left;
+                    font-family: "AdihausDIN-Bold";
+                    letter-spacing: 2px;
+                    border: none;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    transition: 0.3s cubic-bezier(0.3, 0, 0, 1);
+
+                    &:hover {
+                      background-color: #fff;
+                      color: #000;
+                      text-decoration: none;
+                      cursor: pointer;
+                    }
+                    .card_content {
+                      flex: 1 1 auto;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ----------- End Content Page 5------------------ */
+
+/* ----------- Content Page 6------------------ */
+#page_6 {
+  // Like Content Page 4
+}
+/* ----------- End Content Page 6------------------ */
+
+/* ----------- Content Page 7------------------ */
+#page_7 {
+  position: relative;
+  width: 100%;
+
+  .component-wrapper {
+    position: relative;
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: var(--spacing-80);
+    padding: 0 var(--spacing-15);
+    .popular_key {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      .content_pop {
+        width: 100%;
+        .header_pop {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          width: 100%;
+          .title_pop {
+            font-size: 40px;
+            font-family: "AdihausDIN-CnBoldItalic";
+            line-height: 36px;
+            letter-spacing: 0.04em;
+          }
+        }
+
+        .keyword_content {
+          max-width: 100%;
+          position: relative;
+          width: 1280px;
+          margin: 0;
+          overflow: hidden;
+          padding: 0;
+          .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            width: calc(100% + 3rem);
+            margin: 0 0 18px 0;
+            .keyword_wrapper {
+              display: flex;
+              justify-content: center;
+              align-items: flex-end;
+              margin: 65px 0 0 0;
+              width: 33.3333333333%;
+              .keyword_redesign {
+                margin-right: 3rem;
+                font-size: 40px;
+                font-family: "adineuePRO-Bold";
+                letter-spacing: 0.02em;
+                line-height: 1;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #000;
+                padding: 0 0 0.4rem 0;
+                margin-bottom: -1px;
+                align-items: center;
+                cursor: pointer;
+                display: inline-flex;
+                color: #000;
+                background-color: transparent;
+
+                &:hover {
+                  border-bottom-width: 8px;
+                  border-bottom-color: #000;
+                  margin-bottom: -8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ----------- End Content Page 7------------------ */
+
+/* ----------- Content Page 8------------------ */
+#page_8 {
+  position: relative;
+  width: 100%;
+  margin-top: var(--spacing-80);
+  .seo_component {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #f5f5e5;
+    .seo_container {
+      width: 1280px;
+      max-width: 100%;
+      position: relative;
+      padding: 0 var(--spacing-15);
+      margin: 0 auto;
+      .seo_row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .seo-first-column {
+          flex: 0 1 50%;
+          padding: 0 40px 0 0;
+          margin: 0;
+          width: 41.6666666667%;
+          .seo_heading {
+            min-height: 126px;
+            font-size: 40px;
+            font-family: "adineuePRO-Bold";
+            letter-spacing: 0.02em;
+            line-height: 1;
+            margin-bottom: 0;
+            max-width: 420px;
+          }
+
+          .seo_content {
+            margin: 10px 0 0 0;
+            margin-top: 20px;
+            font-family: "AdihausDIN-Regular";
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+        .seo-second-column {
+          margin-top: 0;
+          padding: 0 0 0 40px;
+          flex: 0 1 50%;
+          margin: 0;
+          width: 41.6666666667%;
+          .seo_heading {
+            min-height: 126px;
+            font-size: 40px;
+            font-family: "adineuePRO-Bold";
+            letter-spacing: 0.02em;
+            line-height: 1;
+            margin-bottom: 0;
+            max-width: 420px;
+          }
+
+          .seo_content {
+            margin: 10px 0 0 0;
+            margin-top: 20px;
+            font-family: "AdihausDIN-Regular";
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+/* ----------- End Content Page 8------------------ */
+
+@import "scroll-trigger";
+// @import "men";
+
+/* ---------------Footer Content--------------- */
+@import "footer";
+/* ---------------End Footer Content--------------- */
+
+/* -----------Media Query Responsive---------- */
+@import "media-responsive";
+/* ---------End Media Query Responsive------- */
+
+.test {
+  height: 300px;
+}
+/* sass view/scss/index.scss:view/css/index.css --watch --no-source-map view/css/index.css:view/css/index.min.css --style=compressed --watch */
