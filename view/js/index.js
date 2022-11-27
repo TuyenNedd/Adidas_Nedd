@@ -86,7 +86,7 @@ new Vue({
 
 function changePath() {
   const pathCon = document.querySelector(".pathcon");
-  const vid = document.getElementById("collaboration");
+  const vid = document.getElementById("fifa");
   if (pathCon.getAttribute("d") == "M19 14H17V30H19V14ZM27 14H25V30H27V14Z") {
     pathCon.setAttribute(
       "d",
